@@ -37,9 +37,12 @@ RUN unzip opencv-2.4.11.zip && \
     rm -rf opencv-2.4.11*
 
 # install node
-RUN apt-get install -y nodejs
-RUN npm install express -g
-RUN sudo chown -R $(whoami) $(npm config get prefix)/{lib/node_modules,bin,share}
+RUN curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
+RUN sudo apt-get install -y \
+                  nodejs \
+                  npm
+RUN sudo npm install npm -g
+RUN sudo npm install express -g
 
 # install meteor
 RUN curl https://install.meteor.com/ | sh
