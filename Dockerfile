@@ -47,7 +47,7 @@ RUN sudo npm install express -g
 # install meteor
 RUN curl https://install.meteor.com/ | sh
 
-RUN mkdir var\www \
-    cd \var\www \
+RUN mkdir var/www \
+    cd /var/www \
     meteor create meteor_cv \
     cd meteor_cv
