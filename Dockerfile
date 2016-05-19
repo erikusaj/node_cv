@@ -10,6 +10,7 @@ RUN apt-get update -y && \
             apt-utils \
             sudo \
             wget \
+            curl \
             unzip \
             nano \
             imagemagick \
