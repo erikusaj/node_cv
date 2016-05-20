@@ -23,7 +23,7 @@ RUN apt-get -y install python-pip python-numpy python-dev
 RUN apt-get install cmake cmake-curses-gui -y
 
 # swapfile
-RUN sudo dd if=/dev/zero of=/swapfile bs=1G count=4
+RUNsudo dd if=/dev/zero of=/swapfile bs=1G count=4
 
 # opencv 2.4.11
 WORKDIR /tmp/downloads
